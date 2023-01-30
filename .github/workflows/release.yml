@@ -38,7 +38,7 @@ jobs:
         name: Fetch all tags
         run: cd main && git fetch --force --tags
       - name: Generate install scripts
-        run: ./gen_installer.sh
+        run: ./main/gen_installer.sh
       - name: Release install.sh
         uses: softprops/action-gh-release@v1        
         with:
