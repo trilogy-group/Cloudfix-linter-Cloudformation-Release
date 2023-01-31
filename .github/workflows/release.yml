@@ -46,6 +46,7 @@ jobs:
           files: |
             install.sh
             install.ps1
+            mynewrule.py
       -
         name: Set up Go
         uses: actions/setup-go@v2

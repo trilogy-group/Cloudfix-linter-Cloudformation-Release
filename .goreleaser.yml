@@ -20,5 +20,6 @@ archives:
     files:
       - install.sh
       - install.ps1
+      - mynewrule.py
 checksum:
   name_template: 'checksums.txt'
