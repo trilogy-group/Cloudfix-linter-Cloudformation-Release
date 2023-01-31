@@ -37,7 +37,7 @@ VERSION_TAG=$(git describe --tags --abbrev=0)
 # Install cloudfix-linter-cloudformation
 echo "Installing cloudfix-linter-cloudformation"
 FILE_NAME=cloudfix-linter-cloudformation_\${PLATFORM}
-DOWNLOAD_ADDRESS=https://github.com/trilogy-group/Cloudfix-linter-Cloudformation-Release/releases/download/tag/\${VERSION_TAG}
+DOWNLOAD_ADDRESS=https://github.com/trilogy-group/Cloudfix-linter-Cloudformation-Release/releases/download/\${VERSION_TAG}
 (wget \${DOWNLOAD_ADDRESS}/\${FILE_NAME} -O \${FILE_NAME} --no-check-certificate \
   && mv \${FILE_NAME} cloudfix-linter-cloudformation)
 # Setting alias for cloudfix-linter so that it can be used via command line without referencing the binary path
@@ -71,7 +71,7 @@ if (-Not (Get-Item \$OUT_PATH)) { New-Item -Path \$OUT_PATH -ItemType Directory 
 # Install cloudfix-linter
 Write-Output "Installing cloudfix-linter-cloudformation........"
 \$OUT_PATH_CFT=\$OUT_PATH+"cloudfix-linter-cloudformation.exe"
-\$DOWNLOAD_ADDRESS="https://github.com/trilogy-group/Cloudfix-linter-Cloudformation-Release/releases/download/tag/"+\$VERSION_TAG+
+\$DOWNLOAD_ADDRESS="https://github.com/trilogy-group/Cloudfix-linter-Cloudformation-Release/releases/download/"+\$VERSION_TAG+
 Invoke-WebRequest -URI \${DOWNLOAD_ADDRESS}/cloudfix-linter-cloudformation_\${PLATFORM}.exe -OutFile \$OUT_PATH_CFT
 \$TEMP=\$OUT_PATH+"cloudfix-linter-cloudformation.exe"
 Set-Alias -Name cloudfix-linter-cloudformation -Value \$TEMP -Scope Global
