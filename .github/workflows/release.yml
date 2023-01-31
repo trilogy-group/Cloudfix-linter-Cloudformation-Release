@@ -39,7 +39,7 @@ jobs:
         run: cd main && git fetch --force --tags
       - name: Generate install scripts
         run: cd main && ./gen_installer.sh && mv install.sh ../ && mv install.ps1 ../
-      - name: Release install.sh and install.ps1
+      - name: Release install.sh, install.ps1 and mynewrule.py
         uses: softprops/action-gh-release@v1        
         with:
           generate_release_notes: false
