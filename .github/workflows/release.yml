@@ -24,7 +24,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v3
         with:
-          repository: trilogy-group/cloudfix-linter-developer
+          repository: trilogy-group/cloudfix-linter-cloudformation
           # PAT has been used here (a token with read access to the above repo is needed)
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
           fetch-depth: 0
@@ -63,6 +63,6 @@ jobs:
           
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          APP_NAME: cloudfix-linter-developer
+          APP_NAME: cloudfix-linter-cloudformation
           # Your GoReleaser Pro key, if you are using the 'goreleaser-pro' distribution
           # GORELEASER_KEY: ${{ secrets.GORELEASER_KEY }}
